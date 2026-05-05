@@ -69,10 +69,7 @@ int cekKurung(const char *str) {
 int main() {
     char input[1000];
 
-    if (!fgets(input, sizeof(input), stdin)) {
-        printf("Gagal membaca input.\n");
-        return 1;
-    }
+    fgets(input, sizeof(input), stdin);
 
     if (cekKurung(input)) {
         printf("VALID\n");
