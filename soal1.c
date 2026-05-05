@@ -38,10 +38,10 @@ char pop(Stack *s) {
     return s->data[(s->top)--];
 }
 
-int cekPasangan(char ch) {
-    if( ch == '(' || ch == ')' ||
-        ch == '{' || ch == '}' || 
-        ch == '[' || ch == ']' )
+int cekPasangan(char open, char close) {
+    if( open == '(' || close == ')' ||
+        open == '{' || close == '}' || 
+        open == '[' || close == ']' )
         return 1;
     
     return 0;
