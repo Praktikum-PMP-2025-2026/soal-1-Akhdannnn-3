@@ -3,7 +3,7 @@
 *   Hari dan Tanggal    : Selasa, 5 Mei 2026
 *   Nama (NIM)          : Ahmad Akhdan Tristan Salman (13224039)
 *   Nama File           : soal1.c
-*   Deskripsi           : Program untuk mengurutkan data meteorit dan cetak tiga terbaik.
+*   Deskripsi           : Program untuk periksa validitas string kurung dengan mengabaikan huruf kecil.
 * 
 */
 
@@ -34,7 +34,7 @@ int push(Stack *s, char c) {
 }
 
 char pop(Stack *s) {
-    if (isEmpty(s)) return 0;
+    if (isEmpty(s)) return 1;
     return s->data[(s->top)--];
 }
 
