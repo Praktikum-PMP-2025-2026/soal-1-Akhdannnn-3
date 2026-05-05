@@ -74,8 +74,6 @@ int main() {
         return 1;
     }
 
-    input[strcspn(input, "\n")] = 0;
-
     if (cekKurung(input)) {
         printf("VALID\n");
     } else {
