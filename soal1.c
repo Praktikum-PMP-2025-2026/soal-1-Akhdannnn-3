@@ -48,7 +48,9 @@ int cekKurung(const char *str) {
     Stack s;
     initStack(&s);
 
-    for (int i = 0; str[i] != '\0'; i++) {
+
+
+    for (int i = 0; str[i] != 0; i++) {
         char ch = str[i];
 
         if (ch == '(' || ch == '[' || ch == '{') {
@@ -72,7 +74,12 @@ int main() {
         return 1;
     }
 
-    input[strcspn(input, "\n")] = '\0';
+    input[strcspn(input, "\n")] = 0;
+
+    if (strlen(input) == 0) {
+        printf("0\n");
+        return 0;
+    }
 
     if (cekKurung(input)) {
         printf("VALID\n");
