@@ -77,7 +77,7 @@ int main() {
     input[strcspn(input, "\n")] = 0;
 
     if (strlen(input) == 0) {
-        printf("VALID\n");
+        printf("\n");
         return 0;
     }
 
